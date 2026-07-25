@@ -464,18 +464,15 @@
         <div class="line"></div>
     </div>
 
-    <!-- Главный экран с категориями -->
     <div id="categoriesView">
         <div class="categories-grid" id="categoriesGrid"></div>
     </div>
 
-    <!-- Товары категории -->
     <div id="productsView" class="hidden">
         <div class="back-btn" onclick="goToCategories()">← Назад</div>
         <div class="products-grid" id="productsGrid"></div>
     </div>
 
-    <!-- Детальный просмотр -->
     <div class="detail-view hidden" id="detailView"></div>
 
     <div class="cart-bar">
@@ -597,7 +594,9 @@
             { id: 'disposable', name: 'Одноразки', image: 'https://табачка24.рф/d/img_0008.jpg' },
             { id: 'liquids', name: 'Жижи', image: 'https://optom1.ru/upload/resize_cache/iblock/ea4/480_480_1/ea467cdc22a10f3ae155b251eb510cf3.jpg' },
             { id: 'snus', name: 'Снюсы', image: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#1a1a1a"/><text x="100" y="110" text-anchor="middle" fill="#d4af37" font-size="20" font-weight="bold" font-family="Arial">СНЮСЫ</text></svg>') },
-            { id: 'devices', name: 'Устройства', image: 'https://i.imgur.com/EHAFes0.jpeg' }
+            { id: 'devices', name: 'Устройства', image: 'https://i.imgur.com/EHAFes0.jpeg' },
+            { id: 'drinks', name: 'Напитки', image: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#1a1a1a"/><text x="100" y="110" text-anchor="middle" fill="#d4af37" font-size="20" font-weight="bold" font-family="Arial">НАПИТКИ</text></svg>') },
+            { id: 'consumables', name: 'Расходники', image: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#1a1a1a"/><text x="100" y="110" text-anchor="middle" fill="#d4af37" font-size="18" font-weight="bold" font-family="Arial">РАСХОДНИКИ</text></svg>') }
         ];
 
         const products = [
@@ -715,6 +714,26 @@
                 image: 'https://avatars.mds.yandex.net/i?id=78cbda241c23bc19861b71c6c5a96a0a_l-7058209-images-thumbs&n=13',
                 hasVersions: false,
                 options: ['Брусника‑клюква‑малина', 'Смородина‑виноград', 'Малина‑черника‑клюква', 'Экзотический микс', 'Яблоко‑земляника', 'Вишня‑красная смородина', 'Клубника‑смородина‑мята', 'Вишня‑персик‑мята', 'Нектарин‑дыня', 'Кислые дикие ягоды', 'Энергетик‑клубника‑виноград', 'Скитлс', 'Киви‑яблоко', 'Медовая дыня с арбузом', 'Спелая малина с вишней', 'Земляника‑черника', 'Малина‑смородина‑лимон', 'Зелёный виноград с киви', 'Ред булл‑черника‑мята‑лёд', 'Чёрная смородина‑вишня‑лайм', 'Ежевика‑кислая вишня', 'Зелёный виноград‑клюква', 'Кислая вишня‑ред булл‑белая смородина‑лайм', 'Клюква‑красная смородина‑лайм', 'Малина‑ежевика‑черника', 'Малина‑клюква‑зелёный виноград', 'Малина‑черника‑земляника', 'Скитлс‑виноградно‑малиновый', 'Тёмный виноград‑кислая вишня‑белая смородина']
+            },
+            // ==================== НАПИТКИ ====================
+            {
+                id: 'dinamit', name: 'Dinamit', brand: 'Dinamit', category: 'drinks', price: 200,
+                image: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#1a1a1a"/><text x="100" y="110" text-anchor="middle" fill="#d4af37" font-size="20" font-weight="bold" font-family="Arial">DINAMIT</text></svg>'),
+                hasVersions: false,
+                options: ['Динамит Гейм', 'Динамит Черри без сахара', 'Динамит Гейм Черника', 'Динамит Ориджинал', 'Динамит Стронг', 'Динамит Парти Мохито', 'Динамит Джуси Арбуз и Банан', 'Динамит Парти Пассион Стар', 'Динамит Ред Фьюжн']
+            },
+            {
+                id: 'litenergy', name: 'Lit Energy', brand: 'Lit Energy', category: 'drinks', price: 200,
+                image: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#1a1a1a"/><text x="100" y="110" text-anchor="middle" fill="#d4af37" font-size="18" font-weight="bold" font-family="Arial">LIT ENERGY</text></svg>'),
+                hasVersions: false,
+                options: ['Лит Энерджи Классик', 'Лит Энерджи Зеро Сахар', 'Лит Энерджи Цитрус Панч', 'Лит Энерджи Малина', 'Лит Энерджи Голубика', 'Лит Энерджи Гранат', 'Лит Энерджи Манго‑Кокос', 'Лит Энерджи Клубника‑Арбуз', 'Лит Энерджи Черничный Пончик']
+            },
+            // ==================== РАСХОДНИКИ ====================
+            {
+                id: 'xros_cartridge', name: 'Картридж Xros', brand: 'Vaporesso', category: 'consumables', price: 350,
+                image: 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#1a1a1a"/><text x="100" y="110" text-anchor="middle" fill="#d4af37" font-size="18" font-weight="bold" font-family="Arial">XROS</text></svg>'),
+                hasVersions: false,
+                options: ['0.6 Ом', '0.8 Ом', '1.0 Ом', '1.2 Ом']
             }
         ];
 
